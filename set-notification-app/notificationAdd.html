@@ -66,12 +66,12 @@
     <script>
       const id = (id) => document.getElementById(id);
       const number = id('number');
-      console.log(number.value);
-      id('submit').addEventListener('click',(e)=>{
-e.preventDefault();
-console.log("submit clicked")
-id('data-count').setAttribute("data-count",number.value );
-      })
+      // console.log(number.value);
+      id('submit').addEventListener('click', (e) => {
+        e.preventDefault();
+        // console.log('submit clicked');
+        id('data-count').setAttribute('data-count', number.value);
+      });
     </script>
   </body>
 </html>
