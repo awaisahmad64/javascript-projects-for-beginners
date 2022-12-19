@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Notifications</title>
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      button {
+        position: relative;
+        border: none;
+        padding: 0.5rem;
+      }
+      button::before {
+        content: attr(data-count);
+        background: red;
+        color: #fff;
+        position: absolute;
+        top: -0.75em;
+        right: -0.75em;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 1.5em;
+      }
+      p {
+        padding: 2rem;
+        background: cyan;
+        margin-bottom: 1rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="inner-center">
+        <input type="number" name="number" id="number" value="8" />
+        <p id="submit">submit</p>
+        <button data-count="8" id="data-count">
+          <i class="far fa-bell"></i>
+        </button>
+      </div>
+    </div>
+    <script>
+      const id = (id) => document.getElementById(id);
+      const number = id('number');
+      console.log(number.value);
+      id('submit').addEventListener('click',(e)=>{
+e.preventDefault();
+console.log("submit clicked")
+id('data-count').setAttribute("data-count",number.value );
+      })
+    </script>
+  </body>
+</html>
