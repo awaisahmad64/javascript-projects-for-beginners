@@ -57,7 +57,7 @@
     <div class="center">
       <div class="inner-center">
         <input type="number" name="number" id="number" value="8" />
-        <p id="submit">submit</p>
+        <!-- <p id="submit">submit</p> -->
         <button data-count="8" id="data-count">
           <i class="far fa-bell"></i>
         </button>
@@ -67,7 +67,7 @@
       const id = (id) => document.getElementById(id);
       const number = id('number');
       // console.log(number.value);
-      id('submit').addEventListener('click', (e) => {
+      id('number').addEventListener('keyup', (e) => {
         e.preventDefault();
         // console.log('submit clicked');
         id('data-count').setAttribute('data-count', number.value);
