@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Form validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <h4 class="text-danger mr-4">Payment Method</h4>
+        <div class="col-md-6 col-6 dp">
+          <img src="download.png" class="custom-border p-2 px-4 ml-4 mw-img" alt="" /><img
+            src="img2.png"
+            class="mx-2 custom-border p-2 px-4 mw-img"
+            alt=""
+          />
+        </div>
+            <form action="index.html" class="mt-5">
+              <div class="form-group mb-2">
+                <label for="cardNo">Name on Card</label>
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  id="cardNo"
+                  aria-describedby="emailHelp"
+                  placeholder="Jhon Smith"
+                />
+                <small id="cardHelp" class="d-none form-text  text-danger"
+                  >Please Enter Your Card Number Here.</small
+                >
+              </div>
+              <div class="row">
+              <div class="col-md-6 col-lg-6">
+                <div class="form-group mb-2">
+                  <label for="cardNumber">Card Number </label>
+                  <input type="text" class="form-control rounded-0" id="cardNumber" aria-describedby="emailHelp" placeholder="0000-0000-0000-0000">
+                  <small id="cardNumberHelp" class="d-none form-text text-danger">Please Enter your valid card number here.</small>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <div class="form-group mb-2">
+                  <label for="exampleInputEmail1">CVV</label>
+                  <input type="text" class="form-control rounded-0" id="cvv" aria-describedby="emailHelp" placeholder="000">
+                  <small id="cvvHelp" class="d-none form-text text-danger"> Please Enter your valid CVV code here.</small>
+                </div>
+              </div>
+              </div>
+              <div class="form-group mb-2">
+                <label for="date">Expiry Date</label>
+                <input type="text" class="form-control rounded-0" id="date" aria-describedby="emailHelp" placeholder="dd/mm">
+                <small id="dateHelp" class=" d-none form-text text-danger">Please Enter correct date here.</small>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary rounded-0 px-5" id="btn">Submit<i class="mx-2 bi bi-arrow-right"></i></button>
+              </div>
+            </form>
+      </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
